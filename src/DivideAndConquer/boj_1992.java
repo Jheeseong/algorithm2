@@ -3,7 +3,6 @@ package DivideAndConquer;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
 
 public class boj_1992 {
     public static int[][] arr;
