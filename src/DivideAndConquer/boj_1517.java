@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 public class boj_1517 {
     static Long[] arr;
     static Long[] tmp;
-    static int cnt = 0;
+    static Long cnt = 0L;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
