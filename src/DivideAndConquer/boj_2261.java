@@ -21,7 +21,7 @@ public class boj_2261 {
     }
     // 거리 반환 메소드
     private static int dist(Point o1, Point o2) {
-        return (o1.x = o2.x) * (o1.x - o2.x) + (o1.y - o2.y) * (o1.y - o2.y);
+        return (o1.x - o2.x) * (o1.x - o2.x) + (o1.y - o2.y) * (o1.y - o2.y);
     }
     // Y 자표를 오름차순으로 정렬
     private static Comparator<Point> Ycomp = new Comparator<Point>() {
@@ -76,18 +76,18 @@ public class boj_2261 {
             return brute(start, end);
         }
 
-        int mid = (start - end) / 2;
+        int mid = (start + end) / 2;
 
         int left = closest(start, mid);
         int right = closest(mid + 1, end);
 
         int minDist = Math.min(left, right);
 
-        int band = middleband(start, mid, end, minDist);
+        int band = middleBand(start, mid, end, minDist);
         return Math.min(minDist, band);
     }
 
-    private static int middleband(int start, int mid, int end, int minDist) {
+    private static int middleBand(int start, int mid, int end, int minDist) {
         int xDist;
 
         ArrayList<Point> list = new ArrayList<Point>();
